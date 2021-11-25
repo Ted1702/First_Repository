@@ -1,0 +1,31 @@
+1. prima pag cu denumire proiect si numele datcu si eu
+2. scopul si motivatia proiectului
+3. contributii student
+4. diagrama circuit / sau o diagrama grant
+5. Schema bloc robot.
+6. macheta robot
+7. Schema bloc Telecomanda
+8. cum arata PCB
+9. Comunicatie radio Raspberry Pi si arduino nano cu nrf24l01+
+10. controlul motoarelor DC cu puntea H și a servo-motoarelor sg90
+11. 
+12. organigramă cod sursă
+13. Concluzii
+
+
+
+structura diagrama grant
+
+planificare initiala
+telecomanda schema bloc
+robot schema bloc
+telecomanda pcb
+telecomanda software
+telecomanda asamblare si testare
+constructia brat mecanic
+constructia robot
+robot software software
+robot asamblare si testare
+testare sistem
+documentatie scrisă 
+

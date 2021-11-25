@@ -1,0 +1,120 @@
+2020
+
+https://www.raspberrypi-spy.co.uk/2018/11/introducing-raspberry-pi-3-model-a-computer/
+13 oct 2020
+https://lastminuteengineers.com/nrf24l01-arduino-wireless-communication/
+13 oct 2020
+https://www.teachmemicro.com/arduino-nano-pinout-diagram/
+13 oct 2020
+http://invent.module143.com/daskal_tutorial/raspberry-pi-3-wireless-pi-to-arduino-communication-with-nrf24l01/
+13 oct
+De facut word cu explicarea realizarii comunicatiei wireless intre raspberry pi 3 model A+ si arduino nano cu cele 2 module nrf24l01+
+https://www.youtube.com/watch?v=2bganVdLg5Q&t=31s
+17 octombrie conectarea L298N la raspberry pi
+
+
+13nov
+https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/5
+
+
+15nov
+https://arduino.stackexchange.com/questions/29282/rf24-split-data-in-payloads-at-sender-and-then-rebuild-on-receiving-end
+https://forum.sparkfun.com/viewtopic.php?t=15667
+https://stackoverflow.com/questions/46726757/capture-and-send-jpeg-images-from-raspberry-pi-to-pc-socket-python
+
+Copy from pi-to pc and lets say make an application for that.
+https://www.youtube.com/watch?v=WIOpNuQc068
+
+Pyton socket livestreaming from raspberry pi camera to laptop screen.
+https://www.youtube.com/watch?v=bWwZF_zVf00
+
+
+
+26nov
+https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
+
+30 nov stabilirea half duplex cu ajutorul site din 13 nov pb era la delayuri
+
+2021
+
+24 feb 2021
+https://docs.python.org/3/library/io.html
+25 feb 2021
+https://randomnerdtutorials.com/video-streaming-with-raspberry-pi-camera/
+https://randomnerdtutorials.com/video-streaming-with-raspberry-pi-camera/ - bun
+
+01 martie 2021
+https://picamera.readthedocs.io/en/latest/recipes2.html - documentatia pt streaming video
+de invatat bine tot ce e aici.
+imagine cu rec pt site-ul unde se face streamul
+https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.pngall.com%2Frecording-png&psig=AOvVaw3BWMMEH6p9D2Az26MXJ4uM&ust=1614701063837000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNiv8K28j-8CFQAAAAAdAAAAABAD
+Acces remote la raspberry de pe laptop
+https://www.circuitbasics.com/access-raspberry-pi-desktop-remote-connection/
+4 martie
+Tutorial constructie BRAT ROBOTIC 
+https://1sheeld.com/arduino-robot-arm/?__cf_chl_jschl_tk__=010cc8d84b9fe0c6e4cec9ec6510f550da640e66-1614864681-0-ATBMm3WDrDhXFC6wJfl03WTd26I7QsKedkkfZGdfwZaBEG-lMjensfP0b6NCgyDxdJylcUGmXpwq0uuTX1aXefOL04OYw-If_AZBUJfG-bwwY7tKrfLXtX7BZB0zZt_IwMD_RsAw5ASp8y9bzybzBuh_uM5hiR3yHw97kxXPQRSqrWpmzCPRnr7x2rAhzIPReYDym0Wk3gWHyYDltyGecoSXxwPOW5b8eOqUzpIZy_pO7VNrXpBjR70wuK4cg6f2gsq4FfKAe-HNibAKrB0SM6l98ZDVo5nZYWtvBrVLCPjpEZnun699QrrKykx3SXlQmfZzjt6jhPEQqW-0p0QDPgg
+
+Turorial conectare + verificare functionare servo motor
+https://www.youtube.com/watch?v=ZgURwWJaOZw
+
+servo motoare brat robotic
+https://www.optimusdigital.ro/ro/motoare-servomotoare/802-servomotor-de-metal-12g-es08ma.html?search_query=servo+motor&results=149
+3 servo motoare + 2acumulatoare pentru telecomanda ~ 130 lei
+10 martie
+verificat servo motoare functionare si programare pt brat robotic pe arduino
+https://www.arduino.cc/en/Reference/ServoWrite
+https://www.google.com/search?q=arduino+nano+analog+input&rlz=1C1CAFA_enRO758RO758&sxsrf=ALeKk03bAAWqn_CAjkL_4mbEzT_kK4QQ2Q:1615391527667&tbm=isch&source=iu&ictx=1&fir=hCnpljQlROwcdM%252CSPz7P8At1XCnnM%252C_&vet=1&usg=AI4_-kRo0HJD5C1pr2nyo003P_DoGCaoZA&sa=X&ved=2ahUKEwiEz7exiqbvAhXImIsKHcNgBIMQ9QF6BAgHEAE&biw=1536&bih=754&dpr=1.25#imgrc=hCnpljQlROwcdM
+
+15 martie
+https://www.instructables.com/PCB-Creation-with-Eagle-for-Beginners/
+21 martie
+Telecomanda trimis fisier .brd si .sch Paul asteptat raspuns
+Am gasit versiune eagle cu crack pe filelist in care sa ma lase sa fac placute mai mari dimensiune placuta 12x10 cm.
+22 martie
+https://www.explainingcomputers.com/pi_servos_video.html
+servo pe raspberry si unghiul de deplasare
+27 martie
+stopped twitching using pigpio library because the pulses are now in us instead of ms, so they are a lot more precise and the twitching and shaking stopped.
+Now the goal is to adapt this to our algorithm. - Did this still not working 100% the way i want but we optimize later better
+28 martie
+https://www.electronicshub.org/raspberry-pi-dht11-humidity-temperature-sensor-interface/
+pentru senzorul dht11 conectat la raspberry.
+Terminat codul pentru raspberry pi si pentru arduino cu totul
+De lipit si verificat ca functioneaza telecomanda cand ajunge pcb-ul
+De testat si optimizat tot
+De facut site-ul frumos si de adaugat functionalitati.
+26 aprilie 
+https://speed.pub.ro/speed3/wp-content/uploads/2018/07/Manolescu_Vlad_%C8%98tefan-1.pdf
+
+https://mctr.mec.upt.ro/wp-content/uploads/2018/01/Lucrare_Bissinger.pdf
+model licenta
+pentru scris 18 mai
+https://ro.wikipedia.org/wiki/Raspberry_Pi#cite_note-cheatsheet-1
+19 mai
+stepper motor pt scris
+https://www.monolithicpower.com/en/stepper-motors-basics-types-uses
+punte H pentru scris
+https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/
+servo motor pt scris
+https://engineering.eckovation.com/servo-motor-types-working-principle-explained/
+
+14 iunie 2021
+https://raspberrypi.stackexchange.com/questions/34593/raspberry-pi-does-not-receive-nrf24-payload
+
+https://nrf24.github.io/RF24/
+
+
+
+
+5 iulie 
+explicatie dht11
+https://ro.onetransistor.eu/2019/02/senzorii-de-temperatura-si-umiditate.html
+
+explicatie punte H tranzistoare
+
+https://www.electronics-tutorials.ws/transistor/tran_4.html
+
+https://learn.sparkfun.com/tutorials/transistors/all
+
+explicatie servo motoare
+https://components101.com/motors/servo-motor-basics-pinout-datasheet

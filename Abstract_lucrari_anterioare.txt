@@ -1,0 +1,15 @@
+1.
+https://sci-hub.se/https://ieeexplore.ieee.org/abstract/document/6967550
+
+2.
+https://sci-hub.se/https://www.sciencedirect.com/science/article/pii/S2351978919302896
+
+3.https://www.researchgate.net/profile/Hemalatha-Polaganti/publication/287641055_Real_time_Image_Processing_based_Robotic_Arm_Control_Standalone_System_using_Raspberry_pi/links/5678010508ae502c99d53e9a/Real-time-Image-Processing-based-Robotic-Arm-Control-Standalone-System-using-Raspberry-pi.pdf
+
+4.
+https://sci-hub.se/https://ieeexplore.ieee.org/abstract/document/8058248
+
+5.
+http://openaccess.maltepe.edu.tr/xmlui/handle/20.500.12415/3556
+
+Optimus Digital. 2021. Kit Robot cu 2 Motoare pentru Arduino / Raspberry PI DIY. [online] Available at: <https://www.optimusdigital.ro/ro/robotica-kit-uri-de-roboti/140-kit-robot-2-motoare.html?search_query=kit+robot+&results=67> [Accessed 1 July 2021].

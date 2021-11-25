@@ -1,0 +1,152 @@
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+#include <MQ2.h>
+//#include<AESLib.h>
+#include "DHT.h"
+#include<SD.h>
+#include<Wire.h>
+RF24 radio(5,6);
+File myFile;
+#define DHTPIN 9
+#define DHTTYPE DHT11 
+int Analog_Input = A0;
+int lpg, co, smoke;
+MQ2 mq2(Analog_Input);
+const byte addresses[6] = "00001";
+int i=0,motorSpeedA=0,motorSpeedB=0;
+bool stop_recive=false;
+#define enA 10
+#define enb 11
+DHT dht(DHTPIN, DHTTYPE);
+void setup() {
+  SPI.begin();
+  SPI.setClockDivider(2);
+  dht.begin();
+  pinMode(enA, OUTPUT);
+  pinMode(enb, OUTPUT);
+  digitalWrite(4,HIGH);
+  digitalWrite(7,HIGH);
+  pinMode(A0,OUTPUT);
+  pinMode(A2,OUTPUT);
+  pinMode(A5,OUTPUT);
+  pinMode(A4,OUTPUT);
+  pinMode(A3,OUTPUT);
+  pinMode(9,INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+ // digitalWrite(4, HIGH);
+ // digitalWrite(6, LOW);
+  delay(100);
+  radio.begin();
+  radio.openReadingPipe(0,addresses);
+  radio.setAutoAck(false);
+  radio.setPALevel(RF24_PA_MAX);
+  radio.setDataRate(RF24_1MBPS);
+  radio.startListening(); 
+  delay(100);
+  //int chk = DHT.read11(DHT11_PIN);
+  //float* values= mq2.read(true); 
+  lpg = mq2.readLPG();
+  co = mq2.readCO();
+  smoke = mq2.readSmoke();
+  int temp=dht.readTemperature();
+  int hum=dht.readHumidity();
+  char *strings[10];
+ char *ptr = NULL;
+  int i=0,j=0;
+  if(radio.available()) {
+    while(radio.available()){
+    char text[32]="";
+    radio.read(&text, sizeof(text));
+   // uint8_t key[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};
+   // aes256_dec_single(key, text);
+    String copie=text;
+    Serial.println(copie);
+    if(copie=="stop"){
+      radio.openWritingPipe(addresses);
+      radio.stopListening();
+      delay(100);
+      String s="S:"+String(smoke)+" T:"+String(temp)+" H:"+String(hum);
+      char mesaj[32];
+      s.toCharArray(mesaj, 32);
+     // uint8_t key[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};
+     // aes256_enc_single(key, mesaj);
+      Serial.println(mesaj);
+      radio.write(&mesaj, sizeof(mesaj));
+      delay(100);
+      /*digitalWrite(6, HIGH);
+      digitalWrite(4, LOW);*/
+     /* SD.begin(4);
+      myFile = SD.open("senzor.txt", FILE_WRITE);
+      if (myFile) {
+        myFile.print("LPG este:");
+        myFile.print(lpg);
+        myFile.println();
+        myFile.print("CO este:");
+        myFile.print(co);
+        myFile.println();
+        myFile.print("Smoke este:");
+        myFile.print(smoke);
+        myFile.println();
+        myFile.close();
+      } else {
+        Serial.println("error opening senzor.txt");
+      }
+     /*
+    digitalWrite(4, HIGH);
+    digitalWrite(6, LOW);
+    */
+    }else{
+    byte index = 0;
+    ptr = strtok(text, ","); 
+    while(ptr != NULL)
+    {
+        strings[index] = ptr;
+        index++;
+        ptr = strtok(NULL, ","); 
+    }
+  String s1,s2,s3,s4;
+  int grad1,grad2,grad3,grad4;
+   s1=strings[0];
+   s2=strings[1];
+   s3=strings[2];
+   s4=strings[3];
+   s1.remove(0,1);
+   s2.remove(0,1);
+   s3.remove(0,1);
+   s4.remove(0,1);
+   grad1=s1.toInt();
+   grad2=s2.toInt();
+   grad3=s3.toInt();
+   grad4=s4.toInt();
+   if(grad1>0){
+    analogWrite(enA,int(2.55*grad1));
+    analogWrite(enb,int(2.55*grad1));
+    digitalWrite(A5,HIGH);
+    digitalWrite(A3,HIGH);
+   }else{
+    digitalWrite(A5,LOW);
+    digitalWrite(A3,LOW);
+   }
+   if(grad2>0){
+    analogWrite(enA,int(2.55*grad2));
+    analogWrite(enb,int(2.55*grad2));
+    digitalWrite(A4,HIGH);
+    digitalWrite(A2,HIGH);
+   }else{
+    digitalWrite(A4,LOW);
+    digitalWrite(A2,LOW);
+   }
+   if(grad3>0){
+    analogWrite(enA,int(2.55*grad3));
+   }
+   if(grad4>0)
+    analogWrite(enb,int(2.55*grad4));
+    }
+  }
+  }
+  
+}

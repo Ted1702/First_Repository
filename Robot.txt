@@ -1,0 +1,18 @@
+Partlist exported from C:/Users/User/Desktop/Licenta/Robot.sch at 14/04/2021 11:30
+
+Part Value                       Device                      Package                    Description                                                             PROD_ID    SF_ID     SF_SKU   
+BT1                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+BT2                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+BT3                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+BT4                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+BT5                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+BT6                              BATTERY-18650               BATTERY_18650-HOLDER       Battery - Single Cell                                                   BATT-12327           PRT-13113
+J1   RASPBERRYPI-40-PIN-GPIO_PTH RASPBERRYPI-40-PIN-GPIO_PTH 2X20_SHROUDED              Raspberry Pi GPIO Header                                                CONN-12263 PRT-13054          
+M1   SERVO                       SERVO                       1X03                       Servo Motor                                                                                           
+M2   SERVO                       SERVO                       1X03                       Servo Motor                                                                                           
+M3   SERVO                       SERVO                       1X03                       Servo Motor                                                                                           
+U$1  NRF24L01                    NRF24L01                    NRF24L01                   nrF54L01 2.4GHz with 100 Channels Emitter/Reveiver SPI Controlled                                     
+U$2  TEMP-HUM-SENSOR-DHT11       TEMP-HUM-SENSOR-DHT11       TEMP-HUM-SENSOR-DHT11      DHT11 - digital humidity & temperature sensor                                                         
+U$3  DC-DC-LM2596-DISP           DC-DC-LM2596-DISP           DC-DC-LM2596-DISP          DC/DC Step-Down Regulator with Voltage Display based on LM2596-ADJ chip                               
+U$4  DC-DC-LM2596-DISP           DC-DC-LM2596-DISP           DC-DC-LM2596-DISP          DC/DC Step-Down Regulator with Voltage Display based on LM2596-ADJ chip                               
+U1   L298HEATSINK                L298HEATSINK                MULTIWATT15_6400BGHEATSINK L298 Dual Full Bridge Driver                                                                          
